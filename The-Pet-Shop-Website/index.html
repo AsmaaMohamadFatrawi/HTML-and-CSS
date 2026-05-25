@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmaa's Pet Haven | Premium & Exotic Pets</title>
+    <style>
+        /* --- MODERN & CLEAN RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fcf8f2; /* Warm cream/sand background */
+            color: #2c2520; /* Deep espresso brown for readable text */
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* --- UNIQUE BOUTIQUE STYLING --- */
+        /* Soft, organic shapes with elegant double-borders instead of harsh boxes */
+        .premium-card {
+            background: #ffffff;
+            border: 2px solid #ddb892;
+            border-radius: 24px; /* Playful rounded corners */
+            padding: 30px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 24px rgba(127, 85, 57, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle decorative accent bar on the left side of sections */
+        .premium-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: #7f5539; /* Terracotta tone */
+        }
+
+        /* --- HEADER & PERSONAL BRANDING --- */
+        header {
+            text-align: center;
+            background: #ede0d4; /* Soft warm clay tone */
+            padding: 40px 20px;
+        }
+        
+        header::before {
+            display: none; /* Removes the left bar for the header specifically */
+        }
+
+        .logo-area h1 {
+            font-size: 2.8rem;
+            color: #7f5539;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+
+        .logo-area span {
+            color: #b07d62;
+            font-weight: 300;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #9c6644;
+            font-style: italic;
+        }
+
+        /* --- STYLISH NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #7f5539;
+            font-weight: 600;
+            padding: 8px 18px;
+            background: #ffffff;
+            border: 1px solid #ddb892;
+            border-radius: 50px; /* Pill-shaped buttons */
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #7f5539;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* --- SECTION HEADINGS --- */
+        h2 {
+            font-size: 1.8rem;
+            color: #7f5539;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* --- ASMAA'S SHOWCASE GALLERY --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .showcase-card {
+            background: #fff;
+            border-radius: 18px;
+            border: 1px solid #e6ccb2;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-wrapper {
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .status-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(4px);
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #7f5539;
+            border: 1px solid #ddb892;
+        }
+
+        .card-details {
+            padding: 20px;
+        }
+
+        .card-details h3 {
+            color: #7f5539;
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+        }
+
+        .pet-breed {
+            font-size: 0.85rem;
+            color: #b07d62;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* --- CINEMATIC VIDEO PLAYGROUND --- */
+        .video-box {
+            background: #b7b7a4; /* Sophisticated sage green accent */
+            color: #fff;
+        }
+
+        .video-box h2 {
+            color: #fff;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 650px;
+            margin: 20px auto 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 4px solid #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            background: #7f5539;
+            color: #ede0d4;
+            padding: 25px;
+        }
+        
+        footer::before {
+            display: none;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- PERSONALIZED HEADER -->
+        <header class="premium-card">
+            <div class="logo-area">
+                <h1>Asmaa's <span>Pet Haven</span></h1>
+                <p>Curated care for extraordinary companions</p>
+            </div>
+            <nav>
+                <a href="#philosophy">The Vision</a>
+                <a href="#collection">Our Hand-Picked Pets</a>
+                <a href="#sanctuary">Sanctuary Cam</a>
+            </nav>
+        </header>
+
+        <!-- SPECIALIZED INSIGHT / PHILOSOPHY -->
+        <section id="philosophy" class="premium-card">
+            <h2>The Founder's Vision</h2>
+            <p>Welcome to a reimagined pet boutique curated by <strong>Asmaa Mohammed</strong>. At the Haven, we believe finding a pet is more than a transaction—it is matching a soul with its lifelong sanctuary. We specialize in well-socialized, deeply loved, and responsibly sourced companions ranging from everyday favorites to unique, premium breeds.</p>
+        </section>
+
+        <!-- THE CURATED COLLECTION (IMAGES) -->
+        <section id="collection" class="premium-card">
+            <h2>The Curated Collection</h2>
+            <p>Every pet at Asmaa's Haven undergoes extensive health screens and early behavioral socialization.</p>
+            
+            <div class="gallery-grid">
+                <!-- Pet 1 -->
+                <div class="showcase-card">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=500" alt="British Shorthair Cat with Sunglasses">
+                        <span class="status-badge">Available</span>
+                    </div>
+                    <div class="card-details">
+                        <span class="pet-breed">Scottish Fold / Shorthair</span>
+                        <h3>Milo</h3>
+                        <p>Incredibly calm, adjusted to indoor apartment living, and loves high perches.</p>
+                    </div>
+                </div>
+
+                <!-- Pet 2 -->
+                <div class="showcase-card">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500" alt="Two small playful puppies">
+                        <span class="status-badge">Reserved</span>
+                    </div>
+                    <div class="card-details">
+                        <span class="pet-breed">Corgi Mix Siblings</span>
+                        <h3>Cleo & Leo</h3>
+                        <p>Bonded pair looking to be adopted together. High energy, brilliant learners.</p>
+                    </div>
+                </div>
+
+                <!-- Pet 3 -->
+                <div class="showcase-card">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1520848315518-b991dd16a625?w=500" alt="A gorgeous colorful parrot">
+                        <span class="status-badge">Available</span>
+                    </div>
+                    <div class="card-details">
+                        <span class="pet-breed">Scarlet Macaw</span>
+                        <h3>Amir</h3>
+                        <p>An exotic beauty with an extensive vocabulary. Requires an experienced handler.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SANCTUARY PLAYTIME VIDEO -->
+        <section id="sanctuary" class="premium-card video-box">
+            <h2>Live Sanctuary Playtime</h2>
+            <p>Transparency is our policy. Catch a glimpse of our interactive social hour where our animals learn to trust and engage safely with one another.</p>
+            
+            <div class="video-container">
+                <!-- High-quality placeholder video -->
+                <video controls poster="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=700">
+                    <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                    Your web browser does not support the video playback feature.
+                </video>
+            </div>
+        </section>
+
+        <!-- PERSONALIZED FOOTER -->
+        <footer class="premium-card">
+            <p>© 2026 Asmaa's Pet Haven. Designed & Developed by Asmaa Mohammed for Academic Submission.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
